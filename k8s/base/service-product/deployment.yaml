@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-product
+  namespace: project2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service-product
+  template:
+    metadata:
+      labels:
+        app: service-product
+    spec:
+      containers:
+        - name: service-product
+          image: ghcr.io/paul486461/project2-service-product:dev
+          ports:
+            - containerPort: 8082
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: k8s
+            - name: SPRING_CONFIG_IMPORT
+              value: optional:configserver:http://config-server:8889
