@@ -1,0 +1,10 @@
+resources:
+  - ../../base
+
+images:
+  - name: ghcr.io/paul486461/project2-config
+    newTag: prod
+  - name: ghcr.io/paul486461/project2-gateway
+    newTag: prod
+  - name: ghcr.io/paul486461/project2-service-product
+    newTag: prod
