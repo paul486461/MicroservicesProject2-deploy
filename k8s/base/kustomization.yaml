@@ -1,0 +1,5 @@
+resources:
+  - namespace.yaml
+  - config-server
+  - service-product
+  - gateway
