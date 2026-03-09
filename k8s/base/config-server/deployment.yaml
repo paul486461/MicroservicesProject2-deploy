@@ -16,8 +16,10 @@ spec:
       containers:
         - name: config-server
           image: ghcr.io/paul486461/project2-config:dev
+          imagePullPolicy: Always
           ports:
             - containerPort: 8889
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: k8s
+
