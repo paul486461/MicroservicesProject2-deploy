@@ -22,4 +22,17 @@ spec:
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: k8s
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8889
+            initialDelaySeconds: 20
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8889
+            initialDelaySeconds: 30
+            periodSeconds: 20
+
 
