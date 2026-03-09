@@ -16,6 +16,7 @@ spec:
       containers:
         - name: gateway
           image: ghcr.io/paul486461/project2-gateway:dev
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
           env:
@@ -23,3 +24,4 @@ spec:
               value: k8s
             - name: SPRING_CONFIG_IMPORT
               value: optional:configserver:http://config-server:8889
+
