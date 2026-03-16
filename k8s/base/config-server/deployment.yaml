@@ -24,13 +24,13 @@ spec:
               value: k8s
           readinessProbe:
             httpGet:
-              path: /actuator/health
+              path: /actuator/health/readiness
               port: 8889
             initialDelaySeconds: 20
             periodSeconds: 10
           livenessProbe:
             httpGet:
-              path: /actuator/health
+              path: /actuator/health/liveness
               port: 8889
             initialDelaySeconds: 30
             periodSeconds: 20
