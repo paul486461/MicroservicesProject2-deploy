@@ -5,3 +5,4 @@ resources:
   - config-server
   - service-product
   - gateway
+  - redis
