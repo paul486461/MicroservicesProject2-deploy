@@ -1,3 +1,5 @@
+namespace: project2
+
 resources:
   - namespace.yaml
   - config-server
