@@ -4,5 +4,6 @@ resources:
   - namespace.yaml
   - config-server
   - service-product
+  - service-user
   - gateway
   - redis
